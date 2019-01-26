@@ -99,6 +99,6 @@ bcrypt.compare(someOtherPlaintextPassword, hash).then(function(res) {
     // res == false
 });*/
 
-app.listen(3001, ()=> {
-	console.log('app')
+app.listen(process.env.PORT || 3001, ()=> {
+	console.log(`app is running on port ${process.env.PORT}`)
 })
